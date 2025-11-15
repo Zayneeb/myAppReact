@@ -21,12 +21,12 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'git@github.com:Zayneeb/myAppReact.git',
-                    credentialsId: 'Github_ssh'
-            }
-        }
+    steps {
+        // Réutilise le code déjà cloné par "Declarative: Checkout SCM"
+        checkout scm
+    }
+}
+
 
         stage('Build Server Image') {
             steps {
