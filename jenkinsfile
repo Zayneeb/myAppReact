@@ -12,11 +12,11 @@ pipeline {
 
     environment {
         // ID des credentials Docker Hub configurés dans Jenkins (Credentials → ID = "dockerhub")
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
 
         // Noms d'images sur Docker Hub (à adapter avec ton vrai username)
-        IMAGE_NAME_SERVER = 'username/mern-server'
-        IMAGE_NAME_CLIENT = 'username/mern-client'
+        IMAGE_NAME_SERVER = 'zaynebsakh/mern-server'
+        IMAGE_NAME_CLIENT = 'zaynebsakh/mern-client'
     }
 
     stages {
